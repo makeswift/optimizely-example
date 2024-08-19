@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@makeswift/runtime": "^0.19.1",
+    "@optimizely/optimizely-sdk": "^5.3.4",
+    "@optimizely/react-sdk": "^3.2.0",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-tabs": "^1.0.4",
     "clsx": "^2.0.0",
