@@ -13,7 +13,7 @@ runtime.registerComponent(
   lazy(() => import('./Experiment')),
   {
     type: 'Experiment',
-    label: 'Custom / Experiment',
+    label: 'Optimizely / Experiment',
     props: {
       className: Style(),
       flagKey: Combobox({
