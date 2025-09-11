@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { cookies } from 'next/headers'
 
-import { DraftModeScript } from '@makeswift/runtime/next/server'
+import { getSiteVersion } from '@makeswift/runtime/next/server'
 
 import '@/lib/makeswift/components'
 import { MakeswiftProvider } from '@/lib/makeswift/provider'
@@ -28,12 +28,9 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <head>
-        <DraftModeScript />
-      </head>
       <body className={inter.className}>
         <OptimizelyProvider sessionId={sessionId} datafile={datafile}>
-          <MakeswiftProvider>{children}</MakeswiftProvider>
+          <MakeswiftProvider siteVersion={await getSiteVersion()}>{children}</MakeswiftProvider>
         </OptimizelyProvider>
       </body>
     </html>
